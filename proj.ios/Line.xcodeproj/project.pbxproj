@@ -204,6 +204,11 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		5462355318EAED2900B30302 /* BigFootcube.png in Resources */ = {isa = PBXBuildFile; fileRef = 5462354E18EAED2900B30302 /* BigFootcube.png */; };
+		5462355418EAED2900B30302 /* Frankencube.png in Resources */ = {isa = PBXBuildFile; fileRef = 5462354F18EAED2900B30302 /* Frankencube.png */; };
+		5462355518EAED2900B30302 /* Mummycube.png in Resources */ = {isa = PBXBuildFile; fileRef = 5462355018EAED2900B30302 /* Mummycube.png */; };
+		5462355618EAED2900B30302 /* Ogrecube.png in Resources */ = {isa = PBXBuildFile; fileRef = 5462355118EAED2900B30302 /* Ogrecube.png */; };
+		5462355718EAED2900B30302 /* Vampcube.png in Resources */ = {isa = PBXBuildFile; fileRef = 5462355218EAED2900B30302 /* Vampcube.png */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		B936241818EA9FD60033DF74 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = B936241718EA9FD60033DF74 /* test.png */; };
 		B936241E18EAC24D0033DF74 /* Blue-Candy.png in Resources */ = {isa = PBXBuildFile; fileRef = B936241918EAC24D0033DF74 /* Blue-Candy.png */; };
@@ -647,6 +652,11 @@
 		1D6058910D05DD3D006BFB54 /* Line.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Line.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5462354E18EAED2900B30302 /* BigFootcube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BigFootcube.png; sourceTree = "<group>"; };
+		5462354F18EAED2900B30302 /* Frankencube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frankencube.png; sourceTree = "<group>"; };
+		5462355018EAED2900B30302 /* Mummycube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mummycube.png; sourceTree = "<group>"; };
+		5462355118EAED2900B30302 /* Ogrecube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ogrecube.png; sourceTree = "<group>"; };
+		5462355218EAED2900B30302 /* Vampcube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vampcube.png; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		B936241718EA9FD60033DF74 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		B936241918EAC24D0033DF74 /* Blue-Candy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue-Candy.png"; sourceTree = "<group>"; };
@@ -1485,9 +1495,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5462354D18EAED2900B30302 /* fang */ = {
+			isa = PBXGroup;
+			children = (
+				5462354E18EAED2900B30302 /* BigFootcube.png */,
+				5462354F18EAED2900B30302 /* Frankencube.png */,
+				5462355018EAED2900B30302 /* Mummycube.png */,
+				5462355118EAED2900B30302 /* Ogrecube.png */,
+				5462355218EAED2900B30302 /* Vampcube.png */,
+			);
+			path = fang;
+			sourceTree = "<group>";
+		};
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5462354D18EAED2900B30302 /* fang */,
 				B936241918EAC24D0033DF74 /* Blue-Candy.png */,
 				B936241A18EAC24D0033DF74 /* Green-Candy.png */,
 				B936241B18EAC24D0033DF74 /* Pink-Candy.png */,
@@ -1588,14 +1611,19 @@
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
 				B936241E18EAC24D0033DF74 /* Blue-Candy.png in Resources */,
 				D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */,
+				5462355618EAED2900B30302 /* Ogrecube.png in Resources */,
 				B936242218EAC24D0033DF74 /* Yellow-Candy.png in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
+				5462355318EAED2900B30302 /* BigFootcube.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
+				5462355718EAED2900B30302 /* Vampcube.png in Resources */,
 				B936241818EA9FD60033DF74 /* test.png in Resources */,
+				5462355418EAED2900B30302 /* Frankencube.png in Resources */,
 				1A9CE8881765A12C000E3062 /* json_internalarray.inl in Resources */,
+				5462355518EAED2900B30302 /* Mummycube.png in Resources */,
 				1A9CE8891765A12C000E3062 /* json_internalmap.inl in Resources */,
 				1A9CE88C1765A12C000E3062 /* json_valueiterator.inl in Resources */,
 				1A9CE88E1765A12C000E3062 /* sconscript in Resources */,

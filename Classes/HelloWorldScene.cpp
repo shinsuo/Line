@@ -8,6 +8,12 @@ USING_NS_CC;
 #define PiAngle 180.0f
 #define AREA_LIMIT 20.0f
 
+#define BALL_LENGTH 5
+#define BALL_SCALE 0.1f
+const char* ball[] = {"Blue-Candy.png","Green-Candy.png","Pink-Candy.png","Red-Candy.png","Yellow-Candy.png"};
+#define MONSTER_LENGTH 5
+const char* monster[] = {"BigFootcube.png","Frankencube.png","Mummycube.png","Ogrecube.png","Vampcube.png"};
+
 CCScene* HelloWorld::scene()
 {
     // 'scene' is an autorelease object
@@ -37,7 +43,6 @@ bool HelloWorld::init()
     CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
     
     
-
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
@@ -100,10 +105,21 @@ bool HelloWorld::init()
         m_vDot.push_back(sprite);
     }
     
-    m_pBall = CCSprite::create("Blue-Candy.png");
+    m_pBall = CCSprite::create(ball[0]);
     this->addChild(m_pBall);
     m_pBall->setPosition(m_BeginPoint);
     m_pBall->setScale(0.04);
+    
+    for (int i = 0; i < MONSTER_LENGTH; i++)
+    {
+        CCSprite* monsterSp = CCSprite::create(monster[i]);
+        this->addChild(monsterSp);
+        monsterSp->setPosition(ccp(200*i+200, 300));
+        CCLog("%f==%f",monsterSp->getContentSize().width,monsterSp->getContentSize().height);
+        
+        
+        m_vMonster.push_back(monsterSp);
+    }
     
     return true;
 }

@@ -35,6 +35,7 @@ private:
     cocos2d::CCPoint m_BeginPoint;
     
     std::vector<cocos2d::CCSprite*> m_vDot;
+    std::vector<cocos2d::CCSprite*> m_vMonster;
     cocos2d::CCSpriteBatchNode* m_pBatchNode;
     cocos2d::CCRect m_Rect;
     
