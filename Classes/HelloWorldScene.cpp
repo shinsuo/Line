@@ -6,6 +6,7 @@ USING_NS_CC;
 #define DOT_LENGTH 100
 #define Pi  3.1415926f
 #define PiAngle 180.0f
+#define AREA_LIMIT 20.0f
 
 CCScene* HelloWorld::scene()
 {
@@ -35,7 +36,7 @@ bool HelloWorld::init()
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
     
-    m_Rect.setRect(origin.x, origin.y, visibleSize.width/2, visibleSize.height);
+    
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
@@ -82,7 +83,9 @@ bool HelloWorld::init()
 
     CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 1, true);
     
-    m_BeginPoint = ccp(visibleSize.width/2, 20);
+    m_BeginPoint = ccp(visibleSize.width/2, AREA_LIMIT);
+    
+    m_Rect.setRect(-(m_BeginPoint.x - AREA_LIMIT), -(m_BeginPoint.y - AREA_LIMIT), visibleSize.width - 2*AREA_LIMIT, visibleSize.height - 2*AREA_LIMIT);
     
     CCSprite* fire = CCSprite::create("Icon-72.png");
     this->addChild(fire);
@@ -183,7 +186,9 @@ bool HelloWorld::ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent
     m_pBatchNode->setVisible(true);
     CCPoint tar = pTouch->getLocation();
     
-    float angle = getAngle(&m_BeginPoint, &tar);
+    CCPoint new_tar = tar;//ccpSub(tar, m_BeginPoint);
+    
+    float angle = getAngle(&m_BeginPoint, &new_tar);
     
     CCLOG("ccTouchBegan :%f %f == %f %f %f",tar.x,tar.y,angle/Pi*PiAngle,atan2f(1,1)/Pi*PiAngle,tan(45.0f/PiAngle*Pi));
     
@@ -200,7 +205,9 @@ void HelloWorld::ccTouchMoved(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent
 
     CCPoint tar = pTouch->getLocation();
     
-    float angle = getAngle(&m_BeginPoint, &tar);
+    CCPoint new_tar = tar;//ccpSub(tar, m_BeginPoint);
+    
+    float angle = getAngle(&m_BeginPoint, &new_tar);
     CCLOG("ccTouchMoved :%f %f",tar.x,tar.y);
 }
 
