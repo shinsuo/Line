@@ -108,7 +108,6 @@ bool HelloWorld::init()
     m_pBall = CCSprite::create(ball[0]);
     this->addChild(m_pBall);
     m_pBall->setPosition(m_BeginPoint);
-    m_pBall->setScale(0.04);
     
     for (int i = 0; i < MONSTER_LENGTH; i++)
     {
