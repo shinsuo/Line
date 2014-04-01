@@ -87,10 +87,6 @@ bool HelloWorld::init()
     
     m_Rect.setRect(-(m_BeginPoint.x - AREA_LIMIT), -(m_BeginPoint.y - AREA_LIMIT), visibleSize.width - 2*AREA_LIMIT, visibleSize.height - 2*AREA_LIMIT);
     
-    CCSprite* fire = CCSprite::create("Icon-72.png");
-    this->addChild(fire);
-    fire->setPosition(m_BeginPoint);
-    
     m_pBatchNode = CCSpriteBatchNode::create("test.png");
     this->addChild(m_pBatchNode);
     m_pBatchNode->setPosition(m_BeginPoint);
@@ -103,6 +99,11 @@ bool HelloWorld::init()
         sprite->setPosition(ccp(0,i*DOT_SEGMENT));
         m_vDot.push_back(sprite);
     }
+    
+    m_pBall = CCSprite::create("Blue-Candy.png");
+    this->addChild(m_pBall);
+    m_pBall->setPosition(m_BeginPoint);
+    m_pBall->setScale(0.04);
     
     return true;
 }

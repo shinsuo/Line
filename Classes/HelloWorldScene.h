@@ -41,6 +41,9 @@ private:
     float getAngle(cocos2d::CCPoint* des, cocos2d::CCPoint* tar);
     
     BORDER4 checkRect(cocos2d::CCPoint* pt);
+    
+    
+    cocos2d::CCSprite* m_pBall;
 };
 
 #endif // __HELLOWORLD_SCENE_H__
